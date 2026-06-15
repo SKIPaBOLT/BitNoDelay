@@ -1,0 +1,3 @@
+BitNoDelay	KEYWORD1
+noDelay	KEYWORD2
+noDelayReset	KEYWORD2
