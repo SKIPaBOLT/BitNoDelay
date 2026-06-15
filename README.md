@@ -10,6 +10,18 @@ noDelay(ID, value_ms, phase_ms, deadline_ms) {
 }
 ```
 
+## Current status
+
+The current library is universal Arduino code. It uses only `Arduino.h`, `millis()`, fixed-width integer types, templates, and macros.
+
+Planned global optimizations and controller-specific branches are documented here:
+
+- [Optimization roadmap](docs/optimization-roadmap.md)
+- [Timing behavior](docs/timing-behavior.md)
+- [Design notes](docs/design-notes.md)
+
+The roadmap covers possible AVR, STM32, ESP32, RP2040, SAMD, packed-state, custom time-source, and future FastGPIO/FastPWM/FastADC directions.
+
 The library is optimized around compile-time path selection:
 
 | Input | Internal path |
