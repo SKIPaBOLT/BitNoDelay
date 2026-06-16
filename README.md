@@ -1,6 +1,10 @@
 # BitNoDelay
 
-BitNoDelay is a small Arduino IDE timing library for writing non-blocking code without declaring timer objects everywhere.
+**Arduino non-blocking delay replacement, millis timer helper, periodic task scheduler, and compile-time optimized timing macro.**
+
+Keywords: `Arduino non-blocking delay`, `millis timer`, `delay replacement`, `non-blocking timer`, `Arduino scheduler`, `periodic task`, `embedded timing`, `AVR`, `STM32`, `ESP32`, `RP2040`, `SAMD`, `Teensy`, `bucket timer`, `deadline timer`, `phase offset timer`.
+
+BitNoDelay is a small Arduino IDE timing library for writing non-blocking code without declaring timer objects everywhere. It is meant for sketches that would normally use `delay()`, hand-written `millis()` checks, or repeated timer variables.
 
 It gives you one macro:
 
@@ -19,6 +23,7 @@ Planned global optimizations and controller-specific branches are documented her
 - [Optimization roadmap](docs/optimization-roadmap.md)
 - [Timing behavior](docs/timing-behavior.md)
 - [Design notes](docs/design-notes.md)
+- [Search keywords](docs/search-keywords.md)
 
 The roadmap covers possible AVR, STM32, ESP32, RP2040, SAMD, packed-state, custom time-source, and future FastGPIO/FastPWM/FastADC directions.
 
@@ -39,12 +44,28 @@ Arduino `delay()` blocks the whole sketch. `millis()` state machines are better,
 
 BitNoDelay keeps the sketch readable while pushing the timer state and bit-oriented path selection behind the curtain.
 
+Useful search terms this project targets:
+
+```text
+Arduino delay replacement
+Arduino non-blocking delay
+Arduino millis timer
+Arduino non-blocking timer
+Arduino periodic task scheduler
+Arduino cooperative scheduler
+embedded C++ timer helper
+STM32 Arduino timer
+ESP32 Arduino timer
+RP2040 Arduino timer
+AVR Arduino timer
+```
+
 ## Install
 
 ### Arduino IDE ZIP install
 
 1. Download the repository as a ZIP.
-2. Arduino IDE: **Sketch → Include Library → Add .ZIP Library...**
+2. Arduino IDE: **Sketch -> Include Library -> Add .ZIP Library...**
 3. Select the ZIP.
 4. Use:
 
@@ -193,6 +214,26 @@ noDelayReset(t_sensor);
 ```
 
 Use this after mode changes, entering menus, waking from sleep, or intentionally re-aligning a timer.
+
+## GitHub topics to add
+
+For better discovery, add these repository topics in GitHub's **About** panel:
+
+```text
+arduino
+arduino-library
+non-blocking
+delay-replacement
+millis
+timer
+scheduler
+embedded
+avr
+stm32
+esp32
+rp2040
+teensy
+```
 
 ## Notes
 
